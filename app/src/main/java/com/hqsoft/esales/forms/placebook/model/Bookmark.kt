@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Bitmap
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.hqsoft.esales.forms.placebook.util.FileUtils
 import com.hqsoft.esales.forms.placebook.util.ImageUtils
 
 // 1
@@ -19,7 +20,8 @@ data class Bookmark(
     var latitude: Double = 0.0,
     var longitude: Double = 0.0,
     var phone: String = "",
-    var notes: String = ""
+    var notes: String = "",
+    var category: String = ""
 ) {
     // 1
     fun setImage(image: Bitmap, context: Context) {
@@ -29,6 +31,12 @@ data class Bookmark(
                 context, image,
                 generateImageFilename(it)
             )
+        }
+    }
+
+    fun deleteImage(context: Context) {
+        id?.let {
+            FileUtils.deleteFile(context, generateImageFilename(it))
         }
     }
 

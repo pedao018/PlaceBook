@@ -7,7 +7,7 @@
 
         <variable
             name="bookmarkData"
-            type="com.hqsoft.esales.forms.placebook.viewmodel.MapsViewModel.BookmarkMarkerView" />
+            type="com.hqsoft.esales.forms.placebook.viewmodel.MapsViewModel.BookmarkView" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

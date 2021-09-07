@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.hqsoft.esales.forms.placebook.model.Bookmark
 
 // 1
-@Database(entities = arrayOf(Bookmark::class), version = 2)
+@Database(entities = arrayOf(Bookmark::class), version = 3)
 abstract class PlaceBookDatabase : RoomDatabase() {
     // 2
     abstract fun bookmarkDao(): BookmarkDao

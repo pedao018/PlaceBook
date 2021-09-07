@@ -11,7 +11,7 @@ import com.hqsoft.esales.forms.placebook.model.Bookmark
 interface BookmarkDao {
 
     // 2
-    @Query("SELECT * FROM Bookmark")
+    @Query("SELECT * FROM Bookmark ORDER BY name")
     fun loadAll(): LiveData<List<Bookmark>>
 
     // 3
